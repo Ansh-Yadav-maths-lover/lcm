@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Construction</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.under-construction {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for animation positioning */
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  margin: 0 auto; /* Ensures equal space on both sides */
+}
+
+.under-construction.clicked {
+  background-color: transparent;
+}
+
+.under-construction img.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.under-construction.clicked img.image {
+  opacity: 1;
+}
+
+.under-construction img.logo {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.under-construction.clicked img.logo {
+  opacity: 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .under-construction {
+    padding: 20px;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="under-construction" id="under-construction">
+      <img src="https://raw.githubusercontent.com/Ansh-Yadav-maths-lover/Ansh-Books/main/web.png" alt="Under Construction Image" class="image">
+      <h2>We're Under Construction!</h2>
+      <p>We're currently working on making our website even better. Please check back soon!</p>
+      <img src="https://ansh-yadav-maths-lover.github.io/lcm/assets/images/photo-1580724495666-99f1d8d7f18f.jpeg" alt="Under Construction Logo" class="logo">
+    </div>
+  </div>
+  <script>
+    const underConstruction = document.getElementById("under-construction");
+
+    underConstruction.addEventListener("click", () => {
+      underConstruction.classList.toggle("clicked");
+    });
+  </script>
+</body>
+</html>
